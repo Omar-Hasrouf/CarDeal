@@ -1,0 +1,146 @@
+:root {
+    --primaryColor: #7a63f1;
+    --secondaryColor: #ebe8fc;
+    --textColor: #a3a3a3;
+    --greycolor: #f4f4f4;
+    --white-color: #f5f4fa; 
+    --black-color: #434344;
+}
+
+.home {
+    padding-top: 8rem;
+}
+
+.secContainer {
+    padding: 0 1.5rem;
+    text-align: center;
+    display: grid;
+    gap: 2rem;
+
+    .homeText {
+        .homeSpan {
+            font-size: 15px;
+            color: var(--textColor);
+            font-weight: 400;
+        }
+
+        .homeTitle {
+            font-size: 30px;
+            color: var(--black-color);
+            font-weight: 700;
+        }
+
+        .btns {
+            gap: 1.5rem;
+            justify-content: center;
+
+            .btn {
+                padding: 10px 15px;
+                border-radius: 3px;
+                font-weight: 600;
+                margin-top: .5rem;
+                font-size: 12px;
+
+                &:hover {
+                    background: var(--primaryColor);
+                    color: var(--white-color);
+                }
+            }
+
+            .btn:nth-child(1) {
+                background: var(--white-color);
+                color: var(--textColor);
+
+                &:hover {
+                    background: var(--primaryColor);
+                    color: var(--white-color);
+                }
+            }
+
+            .btn:nth-child(2) {
+                &:hover {
+                    background: var(--white-color);
+                    color: var(--textColor);
+                }
+            }
+        }
+    }
+
+    .homeImage {
+        margin: auto;
+    }
+}
+
+// media queries to make home responsive
+@media screen and (min-width: 520px) {
+    .home{
+        .secContainer{
+            .homeText{
+                .homeSpan{
+                    font-size: 18px;
+                }
+    
+                .homeTitle{
+                    font-size: 35px;
+                }
+
+                .btns{
+                    .btn{
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .homeImage{
+                max-width: 85%;
+                }
+        }
+    }
+}
+
+@media screen and (min-width: 770px) {
+    .home{
+        padding-top: 10rem;
+        .secContainer{
+            gap: 2.5rem;
+            .homeText{
+                .homeSpan{
+                    font-size: 21px;
+                }
+    
+                .homeTitle{
+                    font-size: 45px;
+                }
+
+                .btns{
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 996px) {
+    .home{
+        padding-top: 12rem;
+        .secContainer{
+            gap: 3rem;
+            .homeText{
+                .homeSpan{
+                    font-size: 25px;
+                }
+    
+                .homeTitle{
+                    font-size: 55px;
+                }
+
+                .btns{
+                    .btn{
+                        font-size: 16px;
+                        padding: 1rem 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
